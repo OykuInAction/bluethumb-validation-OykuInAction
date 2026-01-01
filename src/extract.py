@@ -31,14 +31,20 @@ def download_oklahoma_chloride(config):
     
     base_url = "https://www.waterqualitydata.us/data/Result/search"
     
+    start_date = config['data_sources']['date_range']['start']
+    end_date = config['data_sources']['date_range']['end']
+    start_parts = start_date.split('-')
+    end_parts = end_date.split('-')
+    start_formatted = f"{start_parts[1]}-{start_parts[2]}-{start_parts[0]}"
+    end_formatted = f"{end_parts[1]}-{end_parts[2]}-{end_parts[0]}"
+    
     params = {
         'statecode': config['data_sources']['state_code'],
         'characteristicName': config['data_sources']['characteristic'],
         'siteType': config['data_sources']['site_type'],
         'sampleMedia': config['data_sources']['sample_media'],
-        'providers': config['data_sources']['providers'],
-        'startDateLo': config['data_sources']['date_range']['start'].replace('-', '-'),
-        'startDateHi': config['data_sources']['date_range']['end'].replace('-', '-'),
+        'startDateLo': start_formatted,
+        'startDateHi': end_formatted,
         'mimeType': 'csv',
         'zip': 'yes',
         'dataProfile': 'resultPhysChem'
