@@ -1,0 +1,62 @@
+# Blue Thumb Virtual Triangulation Configuration
+
+data_sources:
+  state: "Oklahoma"
+  state_code: "US:40"
+  characteristic: "Chloride"
+  site_type: "Stream"
+  sample_media: "Water"
+  providers:
+    - "NWIS"
+    - "STORET"
+  date_range:
+    start: "1993-01-01"
+    end: "2024-12-31"
+
+organizations:
+  volunteer:
+    - "OKCONCOM_WQX"
+    - "CONSERVATION_COMMISSION"
+  
+  professional:
+    - "OKWRB-STREAMS_WQX"
+    - "O_MTRIBE_WQX"
+    - "OKWRB-LAKES_WQX"
+    - "USGS-OK"
+    - "USGS-AR"
+    - "USGS-TX"
+    - "OKDEQ"
+    - "ARDEQH2O_WQX"
+    - "CHEROKEE"
+    - "CHEROKEE_WQX"
+    - "OKCORCOM_WQX"
+    - "CNENVSER"
+    - "IOWATROK_WQX"
+    - "KAWNATON_WQX"
+    - "OSAGENTN_WQX"
+    - "PNDECS_WQX"
+    - "SFNOES_WQX"
+    - "WNENVDPT_WQX"
+    - "CHOCNATWQX"
+    - "DELAWARENATION"
+    - "MCNCREEK_WQX"
+    - "QTEO_WQX"
+    - "WDEP_WQX"
+
+geographic_bounds:
+  oklahoma:
+    lat_min: 33.6
+    lat_max: 37.0
+    lon_min: -103.0
+    lon_max: -94.4
+
+matching_parameters:
+  max_distance_meters: 100
+  max_time_hours: 48
+  match_strategy: "all"
+  min_concentration_mg_l: 25
+
+output_paths:
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  results: "data/outputs/"
