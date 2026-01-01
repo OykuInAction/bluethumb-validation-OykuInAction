@@ -46,8 +46,7 @@ def download_oklahoma_chloride(config):
         'startDateLo': start_formatted,
         'startDateHi': end_formatted,
         'mimeType': 'csv',
-        'zip': 'yes',
-        'dataProfile': 'resultPhysChem'
+        'zip': 'yes'
     }
     
     output_dir = Path(config['output_paths']['raw_data'])
