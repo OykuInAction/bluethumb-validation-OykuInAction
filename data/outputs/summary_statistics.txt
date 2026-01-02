@@ -1,0 +1,9 @@
+Blue Thumb Virtual Triangulation - Summary Statistics
+=======================================================
+
+Sample Size (N):     48
+R-squared:           0.838716
+Slope:               0.712408
+Intercept:           106.598752
+P-value:             7.57e-20
+Standard Error:      0.046061
