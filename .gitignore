@@ -2,8 +2,8 @@
 data/raw/*.csv
 data/raw/*.zip
 data/processed/*.csv
-data/outputs/*.png
-data/outputs/*.csv
+# data/outputs/*.png  # Commented out to include validation results
+# data/outputs/*.csv  # Commented out to include validation results
 
 # Python
 __pycache__/
